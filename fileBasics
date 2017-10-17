@@ -1,0 +1,39 @@
+#!/usr/bin/python
+
+#raw_input which reads 1 line from standard input and returns it as a string (removing the trailing newline)
+str = raw_input("Enter your input: ");
+print "Received input is : ", str
+
+#input is equivalent to raw_input, except that it assumes the input is a valid Python expression and returns the evaluated result to you.
+str = input("Enter your input: ");
+print "Received input is : ", str
+
+# Open a file
+fo = open("foo.txt", "w+") #writes to file
+print "Name of the file: ", fo.name
+print "Closed or not : ", fo.closed
+print "Opening mode : ", fo.mode
+
+#different opening modes include:
+#r   Opens a file for reading only. The file pointer is placed at the beginning of the file. This is the default mode.
+#rb  Opens a file for reading only in binary format. The file pointer is placed at the beginning of the file. This is the default mode.
+#r+  Opens a file for both reading and writing. The file pointer will be at the beginning of the file.
+#rb+ Opens a file for both reading and writing in binary format. The file pointer will be at the beginning of the file.
+#w   Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+#wb  Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+#w+  Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
+#wb+ Opens a file for both writing and reading in binary format. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
+#a   Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+#ab  Opens a file for appending in binary format. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+#a+  Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+#ab+ Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+
+#write to the file. Does not add a newline to the end of the written data to the file.
+fo.write( "Python is a great language.\nYeah its great!!\n");
+
+#read() method reads a string from an open file. It is important to note that Python strings can have binary data. apart from text data.
+str = fo.read(10);
+print ("Read String is : ", str)
+
+# Close opend file
+fo.close()
