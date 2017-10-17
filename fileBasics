@@ -1,13 +1,5 @@
 #!/usr/bin/python
 
-#raw_input which reads 1 line from standard input and returns it as a string (removing the trailing newline)
-str = raw_input("Enter your input: ");
-print "Received input is : ", str
-
-#input is equivalent to raw_input, except that it assumes the input is a valid Python expression and returns the evaluated result to you.
-str = input("Enter your input: ");
-print "Received input is : ", str
-
 # Open a file
 fo = open("foo.txt", "w+") #writes to file
 print "Name of the file: ", fo.name
