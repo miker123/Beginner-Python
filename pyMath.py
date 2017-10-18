@@ -16,20 +16,35 @@ print "Line 2 - Value of c is ", c
 c = a - b
 print "Line 2 - Value of c is ", c 
 
+c -= a #same as saying c=c-a
+print "Line 2 - Value of c is ", c 
 
-#Sin
+#Multiplication
+c= a * b 
 c *= a
 print "Line 3 - Value of c is ", c 
 
+#Division
+c = b / a
 c /= a 
 print "Line 4 - Value of c is ", c 
 
-c  = 2
+#Modulus Division
+#It takes modulus using two operands and assign the result to left operand
+c = b % a
 c %= a
 print "Line 5 - Value of c is ", c
 
-c **= a
+a = 2
+b = 3
+#Exponential Power
+c = a ** b #Equivalent to c=a^b
+c **= a  #Equivalent to c=c^b
 print "Line 6 - Value of c is ", c
 
+#Floor Division
+a = 10
+b = 5
+c = a//b 
 c //= a
 print "Line 7 - Value of c is ", c
