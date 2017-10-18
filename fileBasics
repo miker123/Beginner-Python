@@ -2,6 +2,13 @@
 
 # Open a file
 fo = open("foo.txt", "w+") #writes to file
+
+#Another way of opening the file
+#states=('Virginia', 'Oregon')
+#with open("test.txt", "w") as states_out:
+  #for state in states:
+      #states_out.write(state + "\n")
+    
 print "Name of the file: ", fo.name
 print "Closed or not : ", fo.closed
 print "Opening mode : ", fo.mode
@@ -21,11 +28,18 @@ print "Opening mode : ", fo.mode
 #ab+ Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
 
 #write to the file. Does not add a newline to the end of the written data to the file.
-fo.write( "Python is a great language.\nYeah its great!!\n");
+fo.write( "Python is a great language.\nYeah its great!!\n"); #write 1 line
+#fo.writelines(DATA) writes a list of strings to the file
 
 #read() method reads a string from an open file. It is important to note that Python strings can have binary data. apart from text data.
-str = fo.read(10);
+str = fo.read(10); #read 10 characters
+#fo.read() to read the entire file
+#fo.readlines() to read all of the lines in the file
 print ("Read String is : ", str)
 
 # Close opend file
 fo.close()
+
+#Write out buffered data to file f
+#f.flush()
+
